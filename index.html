@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Végéa Concept | Solutions végétales clé en main</title>
+
+<meta name="description"
+content="Végéa Concept imagine et installe des solutions végétales clé en main : potagers, gazon, arrosage et aménagements extérieurs.">
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+color: #17351f;
+background: #fafbf8;
+line-height: 1.6;
+}
+
+/* NAVIGATION */
+
+header {
+background: rgba(255,255,255,0.97);
+border-bottom: 1px solid #e6ebe4;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+nav {
+max-width: 1200px;
+margin: auto;
+padding: 18px 30px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.brand {
+font-size: 25px;
+font-weight: 800;
+letter-spacing: 3px;
+color: #123d21;
+}
+
+.brand span {
+color: #739c36;
+font-weight: 500;
+}
+
+.nav-links {
+display: flex;
+gap: 30px;
+align-items: center;
+}
+
+.nav-links a {
+text-decoration: none;
+color: #28452e;
+font-size: 14px;
+font-weight: 600;
+}
+
+.contact-nav {
+background: #174b2b;
+color: white !important;
+padding: 11px 20px;
+border-radius: 30px;
+}
+
+/* HERO */
+
+.hero {
+min-height: 670px;
+display: flex;
+align-items: center;
+background:
+radial-gradient(circle at 80% 20%, #e5efd8 0%, transparent 35%),
+linear-gradient(135deg, #f7f9f2 0%, #edf3e7 100%);
+}
+
+.hero-inner {
+max-width: 1200px;
+width: 100%;
+margin: auto;
+padding: 80px 30px;
+}
+
+.eyebrow {
+display: inline-block;
+color: #648d31;
+font-size: 13px;
+font-weight: 800;
+letter-spacing: 2px;
+margin-bottom: 22px;
+}
+
+h1 {
+max-width: 800px;
+font-size: clamp(44px, 6vw, 76px);
+line-height: 1.05;
+letter-spacing: -2px;
+color: #123b21;
+margin-bottom: 28px;
+}
+
+.hero-description {
+max-width: 680px;
+font-size: 20px;
+color: #4a5d4e;
+margin-bottom: 36px;
+}
+
+.categories {
+font-weight: 700;
+color: #315a37;
+margin-bottom: 35px;
+letter-spacing: .5px;
+}
+
+.buttons {
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.btn {
+display: inline-block;
+text-decoration: none;
+padding: 15px 25px;
+border-radius: 7px;
+font-weight: 700;
+transition: .2s;
+}
+
+.btn-primary {
+background: #174b2b;
+color: white;
+}
+
+.btn-primary:hover {
+background: #0f371e;
+}
+
+.btn-secondary {
+border: 1px solid #174b2b;
+color: #174b2b;
+background: white;
+}
+
+/* REASSURANCE */
+
+.trust {
+background: #123b21;
+color: white;
+}
+
+.trust-inner {
+max-width: 1000px;
+margin: auto;
+padding: 27px 30px;
+display: flex;
+justify-content: space-around;
+text-align: center;
+gap: 20px;
+font-weight: 700;
+}
+
+.trust span {
+color: #a7c66a;
+margin-right: 6px;
+}
+
+/* INTRO */
+
+.intro {
+padding: 100px 30px;
+text-align: center;
+max-width: 950px;
+margin: auto;
+}
+
+.intro h2 {
+font-size: clamp(32px, 4vw, 48px);
+line-height: 1.15;
+color: #143c22;
+margin-bottom: 25px;
+}
+
+.intro p {
+max-width: 760px;
+margin: auto;
+color: #607064;
+font-size: 18px;
+}
+
+@media(max-width: 750px) {
+
+nav {
+padding: 16px 20px;
+}
+
+.nav-links a:not(.contact-nav) {
+display: none;
+}
+
+.brand {
+font-size: 20px;
+}
+
+.hero {
+min-height: auto;
+}
+
+.hero-inner {
+padding: 75px 22px;
+}
+
+h1 {
+letter-spacing: -1px;
+}
+
+.hero-description {
+font-size: 18px;
+}
+
+.trust-inner {
+flex-direction: column;
+padding: 25px;
+}
+
+.buttons {
+flex-direction: column;
+}
+
+.btn {
+text-align: center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="brand">VÉGÉA <span>CONCEPT</span></div>
+
+<div class="nav-links">
+<a href="#solutions">Nos solutions</a>
+<a href="#potagers">Nos potagers</a>
+<a href="#contact" class="contact-nav">Parler de mon projet</a>
+</div>
+</nav>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="hero-inner">
+
+<div class="eyebrow">VÉGÉA CONCEPT — AMÉNAGE VOS EXTÉRIEURS</div>
+
+<h1>Des solutions végétales pensées pour votre extérieur.</h1>
+
+<p class="hero-description">
+De la conception à l'installation, nous imaginons des solutions
+végétales clé en main, pensées pour votre espace et installées
+directement chez vous.
+</p>
+
+<div class="categories">
+Potagers &nbsp;•&nbsp; Gazon &nbsp;•&nbsp; Arrosage &nbsp;•&nbsp; Aménagements
+</div>
+
+<div class="buttons">
+<a href="#solutions" class="btn btn-primary">
+Découvrir nos solutions
+</a>
+
+<a href="#contact" class="btn btn-secondary">
+Nous parler de votre projet
+</a>
+</div>
+
+</div>
+</section>
+
+<section class="trust">
+<div class="trust-inner">
+<div><span>✓</span> Conçu</div>
+<div><span>✓</span> Livré</div>
+<div><span>✓</span> Installé</div>
+<div><span>✓</span> Planté</div>
+</div>
+</section>
+
+<section class="intro" id="solutions">
+
+<div class="eyebrow">L'UNIVERS VÉGÉA</div>
+
+<h2>Votre extérieur devient un véritable espace de vie.</h2>
+
+<p>
+Plus qu'un simple aménagement, nous développons des solutions
+prêtes à vivre : esthétiques, fonctionnelles et pensées pour
+s'intégrer naturellement à votre extérieur.
+</p>
+
+</section>
+
+</main>
+
+</body>
+</html>
