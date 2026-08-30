@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Végéa Concept | Solutions végétales clé en main</title>
+<title>Végéa Concept | Aménage vos extérieurs</title>
 
 <meta name="description"
-content="Végéa Concept imagine et installe des solutions végétales clé en main : potagers, gazon, arrosage et aménagements extérieurs.">
+content="Végéa Concept imagine et installe des solutions végétales clé en main : potagers, gazon, arrosage, récupération d'eau et aménagements extérieurs.">
 
 <style>
 * {
@@ -22,9 +22,9 @@ scroll-behavior: smooth;
 
 body {
 font-family: Arial, Helvetica, sans-serif;
-background: #fafbf8;
+background: #f8f8f3;
 color: #17351f;
-line-height: 1.6;
+line-height: 1.5;
 }
 
 img {
@@ -32,541 +32,777 @@ max-width: 100%;
 display: block;
 }
 
-.container {
-max-width: 1200px;
-margin: auto;
-padding-left: 30px;
-padding-right: 30px;
+a {
+text-decoration: none;
+color: inherit;
 }
 
-/* HEADER */
+/* =========================
+HEADER
+========================== */
 
 header {
 position: sticky;
 top: 0;
 z-index: 1000;
-background: rgba(255,255,255,.96);
-border-bottom: 1px solid #e6ebe4;
+background: rgba(255,255,255,0.96);
 backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(23,53,31,0.08);
 }
 
-nav {
-max-width: 1200px;
+.header-inner {
+width: min(1180px, 92%);
 margin: auto;
-padding: 12px 30px;
+min-height: 96px;
 display: flex;
 align-items: center;
 justify-content: space-between;
 gap: 30px;
 }
 
-.logo {
-height: 72px;
-width: auto;
-display: block;
+.brand img {
+width: 205px;
+height: auto;
 }
 
-.nav-links {
+nav {
 display: flex;
-gap: 28px;
 align-items: center;
+gap: 28px;
+font-size: 15px;
+font-weight: 600;
 }
 
-.nav-links a {
-text-decoration: none;
-color: #28452e;
-font-size: 14px;
+nav a {
+transition: 0.2s ease;
+}
+
+nav a:hover {
+color: #6f9e37;
+}
+
+.header-cta {
+background: #0c4a25;
+color: white;
+padding: 13px 20px;
+border-radius: 10px;
 font-weight: 700;
+white-space: nowrap;
 }
 
-.nav-cta {
-background: #174b2b;
-color: white !important;
-padding: 11px 20px;
-border-radius: 30px;
-}
-
-/* HERO */
+/* =========================
+HERO
+========================== */
 
 .hero {
-background:
-radial-gradient(circle at 10% 20%, #edf4e6 0%, transparent 35%),
-linear-gradient(135deg, #fafbf7 0%, #eef3e9 100%);
-padding: 70px 0;
+position: relative;
+min-height: 650px;
+display: flex;
+align-items: center;
+background-image:
+linear-gradient(
+90deg,
+rgba(7,30,14,0.78) 0%,
+rgba(7,30,14,0.57) 35%,
+rgba(7,30,14,0.15) 62%,
+rgba(7,30,14,0.02) 100%
+),
+url('./hero-potager.png');
+background-size: cover;
+background-position: center;
 }
 
-.hero-grid {
-display: grid;
-grid-template-columns: 0.9fr 1.1fr;
-gap: 55px;
-align-items: center;
+.hero-inner {
+width: min(1180px, 92%);
+margin: auto;
+position: relative;
+z-index: 2;
+}
+
+.hero-content {
+max-width: 650px;
+color: white;
 }
 
 .eyebrow {
-display: inline-block;
-color: #71963f;
-font-size: 12px;
-font-weight: 800;
-letter-spacing: 2px;
+color: #b7dc72;
 text-transform: uppercase;
-margin-bottom: 20px;
+font-size: 14px;
+font-weight: 800;
+letter-spacing: 1.6px;
+margin-bottom: 18px;
 }
 
-h1 {
+.hero h1 {
 font-size: clamp(44px, 5vw, 70px);
-line-height: 1.04;
-letter-spacing: -2px;
-color: #123b21;
-margin-bottom: 26px;
+line-height: 1.02;
+max-width: 720px;
+margin-bottom: 22px;
 }
 
-.hero-description {
-max-width: 620px;
+.hero p {
 font-size: 19px;
-color: #536458;
-margin-bottom: 25px;
+line-height: 1.6;
+max-width: 570px;
+color: rgba(255,255,255,0.94);
+margin-bottom: 30px;
 }
 
-.categories {
-font-weight: 700;
-color: #315a37;
-margin-bottom: 34px;
-}
-
-.buttons {
+.hero-buttons {
 display: flex;
 gap: 14px;
 flex-wrap: wrap;
 }
 
-.btn {
-display: inline-block;
-text-decoration: none;
-padding: 15px 24px;
-border-radius: 8px;
+.btn-primary,
+.btn-secondary {
+padding: 15px 22px;
+border-radius: 10px;
 font-weight: 800;
-transition: .2s;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: 0.2s ease;
 }
 
 .btn-primary {
-background: #174b2b;
+background: #92bd46;
 color: white;
 }
 
 .btn-primary:hover {
-background: #0f371e;
 transform: translateY(-2px);
+background: #84ad3e;
 }
 
 .btn-secondary {
-border: 1px solid #174b2b;
-color: #174b2b;
+border: 1px solid rgba(255,255,255,0.8);
+color: white;
+background: rgba(255,255,255,0.05);
+}
+
+.btn-secondary:hover {
 background: white;
+color: #17351f;
 }
 
-.hero-image {
-position: relative;
-}
+/* =========================
+TRUST BAR
+========================== */
 
-.hero-image img {
-width: 100%;
-height: 540px;
-object-fit: cover;
-border-radius: 24px;
-box-shadow: 0 25px 70px rgba(20,55,29,.17);
-}
-
-.hero-card {
-position: absolute;
-left: 22px;
-bottom: 22px;
-background: rgba(255,255,255,.94);
-padding: 16px 20px;
-border-radius: 13px;
-box-shadow: 0 10px 30px rgba(0,0,0,.12);
-max-width: 310px;
-}
-
-.hero-card strong {
-display: block;
-color: #174b2b;
-font-size: 16px;
-margin-bottom: 3px;
-}
-
-.hero-card span {
-font-size: 13px;
-color: #657268;
-}
-
-/* BANDEAU */
-
-.trust {
-background: #123b21;
+.trust-bar {
+background: #0c4a25;
 color: white;
 }
 
-.trust-grid {
-max-width: 900px;
+.trust-inner {
+width: min(1180px, 92%);
 margin: auto;
-padding: 25px 30px;
+min-height: 76px;
 display: grid;
 grid-template-columns: repeat(4, 1fr);
-gap: 20px;
-text-align: center;
-font-weight: 800;
-}
-
-.trust-grid span {
-color: #a5c95f;
-margin-right: 6px;
-}
-
-/* INTRO */
-
-.intro {
-padding: 95px 30px;
-max-width: 900px;
-margin: auto;
-text-align: center;
-}
-
-.intro h2 {
-font-size: clamp(32px, 4vw, 48px);
-line-height: 1.15;
-color: #143d22;
-margin-bottom: 24px;
-}
-
-.intro p {
-font-size: 18px;
-color: #647168;
-}
-
-/* POTAGER PHARE */
-
-.signature {
-padding: 25px 0 100px;
-}
-
-.signature-box {
-background: white;
-border-radius: 24px;
-padding: 55px;
-box-shadow: 0 18px 60px rgba(24,61,32,.08);
-}
-
-.signature-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 55px;
 align-items: center;
 }
 
-.signature h2 {
-font-size: clamp(36px,4vw,54px);
-color: #123b21;
+.trust-item {
+text-align: center;
+font-size: 18px;
+font-weight: 700;
+border-right: 1px solid rgba(255,255,255,0.14);
+}
+
+.trust-item:last-child {
+border-right: none;
+}
+
+.trust-item span {
+color: #b7dc72;
+margin-right: 8px;
+}
+
+/* =========================
+INTRO
+========================== */
+
+section {
+padding: 90px 0;
+}
+
+.container {
+width: min(1180px, 92%);
+margin: auto;
+}
+
+.section-label {
+color: #6f9e37;
+font-size: 13px;
+font-weight: 900;
+letter-spacing: 1.6px;
+text-transform: uppercase;
+margin-bottom: 12px;
+}
+
+.section-title {
+font-size: clamp(34px, 4vw, 52px);
+line-height: 1.1;
+margin-bottom: 20px;
+}
+
+.section-text {
+max-width: 720px;
+color: #5f6b62;
+font-size: 18px;
+}
+
+.intro {
+text-align: center;
+}
+
+.intro .section-text {
+margin: auto;
+}
+
+.intro-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 18px;
+margin-top: 50px;
+}
+
+.intro-card {
+background: white;
+padding: 28px 24px;
+border-radius: 18px;
+border: 1px solid #e6e9e1;
+}
+
+.intro-icon {
+font-size: 26px;
+margin-bottom: 12px;
+}
+
+.intro-card h3 {
+font-size: 18px;
+margin-bottom: 7px;
+}
+
+.intro-card p {
+font-size: 14px;
+color: #697169;
+}
+
+/* =========================
+POTAGER AROMATES
+========================== */
+
+.product {
+background: #eef2e7;
+}
+
+.product-grid {
+display: grid;
+grid-template-columns: 1.05fr 0.95fr;
+gap: 60px;
+align-items: center;
+}
+
+.product-image {
+border-radius: 28px;
+overflow: hidden;
+box-shadow: 0 20px 50px rgba(18,42,23,0.13);
+}
+
+.product-image img {
+width: 100%;
+height: 560px;
+object-fit: cover;
+}
+
+.product-badge {
+display: inline-block;
+background: #dbeabf;
+color: #36591d;
+padding: 8px 13px;
+border-radius: 999px;
+font-size: 13px;
+font-weight: 800;
+margin-bottom: 18px;
+}
+
+.product-copy h2 {
+font-size: clamp(38px, 4vw, 55px);
 line-height: 1.05;
 margin-bottom: 12px;
 }
 
-.subtitle {
+.product-subtitle {
 font-size: 21px;
 font-weight: 700;
-color: #688f35;
+margin-bottom: 18px;
+}
+
+.product-intro {
+color: #59665c;
+font-size: 17px;
+margin-bottom: 28px;
+}
+
+.features {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 14px;
+margin-bottom: 28px;
+}
+
+.feature {
+background: white;
+border-radius: 14px;
+padding: 18px;
+border: 1px solid #dfe6d6;
+}
+
+.feature strong {
+display: block;
+font-size: 16px;
+margin-bottom: 5px;
+}
+
+.feature small {
+color: #647066;
+font-size: 13px;
+}
+
+.specs {
+background: rgba(255,255,255,0.6);
+border-radius: 16px;
+padding: 20px;
 margin-bottom: 25px;
 }
 
-.bio {
-display: inline-block;
-background: #eaf3de;
-color: #527925;
+.spec-row {
+display: flex;
+justify-content: space-between;
+gap: 20px;
+padding: 8px 0;
+border-bottom: 1px solid #dfe5d8;
+font-size: 14px;
+}
+
+.spec-row:last-child {
+border-bottom: none;
+}
+
+.spec-row span:last-child {
 font-weight: 800;
-font-size: 13px;
-padding: 8px 13px;
-border-radius: 20px;
+text-align: right;
+}
+
+.certifications {
+display: flex;
+gap: 12px;
+margin-bottom: 28px;
+flex-wrap: wrap;
+}
+
+.cert-card {
+display: flex;
+align-items: center;
+gap: 12px;
+background: white;
+border: 1px solid #dfe5d8;
+border-radius: 13px;
+padding: 12px 15px;
+}
+
+.cert-symbol {
+width: 48px;
+height: 48px;
+border-radius: 10px;
+background: #f1f6e8;
+color: #60952c;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 15px;
+font-weight: 900;
+}
+
+.cert-card strong {
+display: block;
+font-size: 14px;
+}
+
+.cert-card small {
+color: #687169;
+font-size: 12px;
+}
+
+.price-line {
+display: flex;
+align-items: end;
+gap: 12px;
+margin-bottom: 4px;
+}
+
+.price {
+font-size: 50px;
+line-height: 1;
+font-weight: 900;
+color: #0c4a25;
+}
+
+.price-ttc {
+font-weight: 800;
+margin-bottom: 6px;
+}
+
+.included {
+color: #5e685f;
+font-size: 14px;
 margin-bottom: 22px;
 }
 
-.signature p {
-color: #5e6c62;
+.product-cta {
+display: inline-block;
+background: #0c4a25;
+color: white;
+padding: 16px 24px;
+border-radius: 10px;
+font-weight: 800;
+}
+
+/* =========================
+OFFRES
+========================== */
+
+.offers-header {
+text-align: center;
+margin-bottom: 48px;
+}
+
+.offers-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 22px;
+}
+
+.offer-card {
+background: white;
+border-radius: 20px;
+overflow: hidden;
+border: 1px solid #e3e7de;
+min-height: 340px;
+display: flex;
+flex-direction: column;
+}
+
+.offer-placeholder {
+min-height: 165px;
+background:
+linear-gradient(135deg, #dbe7c9, #8fae66);
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-weight: 800;
+font-size: 17px;
+}
+
+.offer-card:first-child .offer-placeholder {
+background-image: url('./potager-aromates.png');
+background-size: cover;
+background-position: center;
+color: transparent;
+}
+
+.offer-body {
+padding: 24px;
+flex: 1;
+}
+
+.offer-body h3 {
+font-size: 24px;
+margin-bottom: 9px;
+}
+
+.offer-body p {
+color: #697169;
+font-size: 15px;
+margin-bottom: 18px;
+}
+
+.offer-price {
+margin-top: auto;
+font-weight: 900;
+font-size: 18px;
+color: #0c4a25;
+}
+
+/* =========================
+AUTRES SOLUTIONS
+========================== */
+
+.solutions {
+background: #0c4a25;
+color: white;
+}
+
+.solutions .section-label {
+color: #b7dc72;
+}
+
+.solutions .section-text {
+color: rgba(255,255,255,0.76);
+}
+
+.solutions-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 18px;
+margin-top: 45px;
+}
+
+.solution-card {
+background: rgba(255,255,255,0.08);
+border: 1px solid rgba(255,255,255,0.13);
+padding: 26px;
+border-radius: 16px;
+}
+
+.solution-card h3 {
+margin-bottom: 8px;
+font-size: 18px;
+}
+
+.solution-card p {
+font-size: 14px;
+color: rgba(255,255,255,0.7);
+}
+
+.coming {
+display: inline-block;
+margin-top: 15px;
+color: #b7dc72;
+font-size: 12px;
+font-weight: 900;
+text-transform: uppercase;
+letter-spacing: 0.8px;
+}
+
+/* =========================
+CONTACT
+========================== */
+
+.contact {
+text-align: center;
+}
+
+.contact-box {
+max-width: 800px;
+margin: auto;
+background: white;
+padding: 55px 35px;
+border-radius: 25px;
+border: 1px solid #e1e6dc;
+}
+
+.contact-box h2 {
+font-size: clamp(32px,4vw,46px);
+margin-bottom: 15px;
+}
+
+.contact-box p {
+color: #687169;
 font-size: 17px;
 margin-bottom: 25px;
 }
 
-.features {
-list-style: none;
-margin-bottom: 30px;
+/* =========================
+FOOTER
+========================== */
+
+footer {
+background: #082e18;
+color: rgba(255,255,255,0.8);
+text-align: center;
+padding: 30px 20px;
+font-size: 13px;
 }
 
-.features li {
-padding: 8px 0;
-border-bottom: 1px solid #edf0ea;
+/* =========================
+MOBILE
+========================== */
+
+@media (max-width: 900px) {
+
+.header-inner {
+min-height: 82px;
+}
+
+.brand img {
+width: 155px;
+}
+
+nav {
+display: none;
+}
+
+.header-cta {
+padding: 11px 14px;
+font-size: 13px;
+}
+
+.hero {
+min-height: 600px;
+background-position: 62% center;
+}
+
+.hero-content {
+max-width: 100%;
+}
+
+.trust-inner {
+grid-template-columns: 1fr 1fr;
+}
+
+.trust-item {
+padding: 16px 6px;
+border-bottom: 1px solid rgba(255,255,255,0.12);
+font-size: 15px;
+}
+
+.intro-grid,
+.solutions-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.product-grid {
+grid-template-columns: 1fr;
+gap: 38px;
+}
+
+.product-image img {
+height: auto;
+}
+
+.offers-grid {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 600px) {
+
+section {
+padding: 65px 0;
+}
+
+.header-inner {
+width: 94%;
+}
+
+.brand img {
+width: 145px;
+}
+
+.header-cta {
+font-size: 12px;
+}
+
+.hero {
+min-height: 620px;
+background-position: 66% center;
+}
+
+.hero h1 {
+font-size: 43px;
+}
+
+.hero p {
+font-size: 16px;
+}
+
+.hero-buttons {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.trust-inner,
+.intro-grid,
+.solutions-grid,
+.features {
+grid-template-columns: 1fr;
+}
+
+.trust-item {
+border-right: none;
+}
+
+.product-copy h2 {
+font-size: 40px;
 }
 
 .price {
 font-size: 43px;
-font-weight: 900;
-color: #174b2b;
-line-height: 1;
-margin-bottom: 8px;
 }
-
-.price-note {
-font-size: 12px;
-color: #788279;
-margin-bottom: 25px;
 }
-
-/* GAMME */
-
-.range {
-padding: 95px 0;
-background: #eef3e9;
-}
-
-.section-title {
-max-width: 700px;
-margin-bottom: 45px;
-}
-
-.section-title h2 {
-font-size: clamp(34px,4vw,50px);
-color: #123b21;
-line-height: 1.1;
-margin-bottom: 15px;
-}
-
-.section-title p {
-color: #637067;
-font-size: 17px;
-}
-
-.cards {
-display: grid;
-grid-template-columns: repeat(4,1fr);
-gap: 20px;
-}
-
-.card {
-background: white;
-padding: 30px;
-border-radius: 18px;
-min-height: 320px;
-display: flex;
-flex-direction: column;
-box-shadow: 0 10px 35px rgba(20,50,25,.06);
-}
-
-.card-label {
-font-size: 11px;
-letter-spacing: 1.6px;
-font-weight: 900;
-color: #799b49;
-margin-bottom: 12px;
-}
-
-.card h3 {
-font-size: 25px;
-line-height: 1.1;
-color: #183f25;
-margin-bottom: 15px;
-}
-
-.card p {
-color: #657068;
-font-size: 15px;
-margin-bottom: 20px;
-}
-
-.card-price {
-margin-top: auto;
-font-weight: 900;
-font-size: 20px;
-color: #174b2b;
-}
-
-.card.main-card {
-background: #163f24;
-}
-
-.main-card h3,
-.main-card .card-price {
-color: white;
-}
-
-.main-card p {
-color: #d9e3d9;
-}
-
-/* CONTACT */
-
-.contact {
-padding: 100px 0;
-}
-
-.contact-box {
-background: #eef4e8;
-border-radius: 25px;
-padding: 60px;
-text-align: center;
-}
-
-.contact-box h2 {
-font-size: clamp(34px,4vw,50px);
-margin-bottom: 18px;
-}
-
-.contact-box p {
-max-width: 650px;
-margin: 0 auto 30px;
-color: #637168;
-}
-
-.contact-actions {
-display: flex;
-justify-content: center;
-gap: 14px;
-flex-wrap: wrap;
-}
-
-footer {
-background: #0e2e19;
-color: #cfd9d0;
-padding: 40px 30px;
-text-align: center;
-font-size: 13px;
-}
-
-/* MOBILE */
-
-@media(max-width: 900px) {
-
-.hero-grid,
-.signature-grid {
-grid-template-columns: 1fr;
-}
-
-.hero-image img {
-height: 430px;
-}
-
-.cards {
-grid-template-columns: repeat(2,1fr);
-}
-
-}
-
-@media(max-width: 650px) {
-
-.container {
-padding-left: 20px;
-padding-right: 20px;
-}
-
-nav {
-padding: 10px 18px;
-}
-
-.logo {
-height: 54px;
-}
-
-.nav-links a:not(.nav-cta) {
-display: none;
-}
-
-.hero {
-padding: 45px 0;
-}
-
-h1 {
-letter-spacing: -1px;
-}
-
-.hero-image img {
-height: 360px;
-}
-
-.buttons {
-flex-direction: column;
-}
-
-.btn {
-text-align: center;
-}
-
-.trust-grid {
-grid-template-columns: 1fr 1fr;
-}
-
-.signature-box {
-padding: 30px 22px;
-}
-
-.cards {
-grid-template-columns: 1fr;
-}
-
-.contact-box {
-padding: 40px 20px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-<nav>
+<div class="header-inner">
 
-<a href="#">
-<img src="logo-vegea.png" alt="Végéa Concept" class="logo">
+<a href="#" class="brand">
+<img src="./logo-vegea.png" alt="Végéa Concept">
 </a>
 
-<div class="nav-links">
+<nav>
 <a href="#potagers">Nos potagers</a>
-<a href="#contact" class="nav-cta">Parler de mon projet</a>
-</div>
-
+<a href="#solutions">Nos solutions</a>
+<a href="#concept">Le concept</a>
+<a href="#contact">Contact</a>
 </nav>
+
+<a href="#contact" class="header-cta">
+Parler de mon projet
+</a>
+
+</div>
 </header>
+
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero">
 
-<div class="container hero-grid">
+<div class="hero-inner">
 
-<div>
+<div class="hero-content">
 
 <div class="eyebrow">
-Végéa Concept — Aménage vos extérieurs
+VÉGÉA CONCEPT — SOLUTIONS VÉGÉTALES CLÉ EN MAIN
 </div>
 
 <h1>
-Des solutions végétales pensées pour votre extérieur.
+Des extérieurs à cultiver et à vivre.
 </h1>
 
-<p class="hero-description">
-De la conception à l'installation, Végéa Concept imagine des solutions
-végétales clé en main, pensées pour votre espace et installées
-directement chez vous.
+<p>
+Potagers, gazon, arrosage, récupération d'eau et aménagements.
+Nous imaginons des solutions végétales pensées pour votre espace,
+votre quotidien et vos envies.
 </p>
 
-<div class="categories">
-Potagers • Gazon • Arrosage • Aménagements
-</div>
+<div class="hero-buttons">
 
-<div class="buttons">
-
-<a href="#potagers" class="btn btn-primary">
-Découvrir nos solutions
+<a href="#potagers" class="btn-primary">
+Découvrir nos potagers
 </a>
 
-<a href="#contact" class="btn btn-secondary">
+<a href="#contact" class="btn-secondary">
 Nous parler de votre projet
 </a>
 
@@ -574,225 +810,418 @@ Nous parler de votre projet
 
 </div>
 
-<div class="hero-image">
-
-<img
-src="hero-potager.png"
-alt="Potager aromatique Végéa Concept installé dans un jardin">
-
-<div class="hero-card">
-<strong>Des aromates frais à quelques pas de votre cuisine.</strong>
-<span>Vous choisissez l'emplacement. Nous nous occupons du reste.</span>
-</div>
-
-</div>
-
 </div>
 
 </section>
 
-<section class="trust">
 
-<div class="trust-grid">
-<div><span>✓</span> Conçu</div>
-<div><span>✓</span> Livré</div>
-<div><span>✓</span> Installé</div>
-<div><span>✓</span> Planté</div>
+<!-- TRUST -->
+
+<div class="trust-bar">
+
+<div class="trust-inner">
+
+<div class="trust-item">
+<span>✓</span> Conçu
 </div>
 
-</section>
+<div class="trust-item">
+<span>✓</span> Livré
+</div>
 
-<section class="intro">
+<div class="trust-item">
+<span>✓</span> Installé
+</div>
 
-<div class="eyebrow">L'univers Végéa</div>
+<div class="trust-item">
+<span>✓</span> Planté
+</div>
 
-<h2>
+</div>
+
+</div>
+
+
+<!-- INTRO -->
+
+<section id="concept">
+
+<div class="container intro">
+
+<div class="section-label">
+L'UNIVERS VÉGÉA
+</div>
+
+<h2 class="section-title">
 Votre extérieur devient un véritable espace de vie.
 </h2>
 
-<p>
-Plus qu'un simple aménagement, nous développons des solutions
-esthétiques, fonctionnelles et faciles à vivre, conçues pour
-s'intégrer naturellement à votre extérieur.
+<p class="section-text">
+De la conception à l'installation, Végéa Concept développe des solutions
+esthétiques, pratiques et durables pour intégrer le végétal au quotidien.
 </p>
+
+<div class="intro-grid">
+
+<div class="intro-card">
+<div class="intro-icon">🌿</div>
+<h3>Des solutions utiles</h3>
+<p>
+Des aménagements pensés pour être réellement utilisés au quotidien.
+</p>
+</div>
+
+<div class="intro-card">
+<div class="intro-icon">🏡</div>
+<h3>Intégrés à votre jardin</h3>
+<p>
+Des solutions conçues pour s'harmoniser naturellement avec votre extérieur.
+</p>
+</div>
+
+<div class="intro-card">
+<div class="intro-icon">🛠</div>
+<h3>Clé en main</h3>
+<p>
+Nous préparons, livrons et réalisons l'installation directement chez vous.
+</p>
+</div>
+
+<div class="intro-card">
+<div class="intro-icon">🌱</div>
+<h3>Prêts à vivre</h3>
+<p>
+À notre départ, votre installation est terminée et prête à être utilisée.
+</p>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<section class="signature" id="potagers">
 
-<div class="container">
+<!-- POTAGER AROMATES -->
 
-<div class="signature-box">
+<section class="product" id="potagers">
 
-<div class="signature-grid">
+<div class="container product-grid">
 
-<div>
-
-<div class="eyebrow">
-Notre solution signature
+<div class="product-image">
+<img
+src="./potager-aromates.png"
+alt="Potager Aromates Végéa Concept installé dans un jardin">
 </div>
 
-<h2>Potager Aromates</h2>
+<div class="product-copy">
 
-<div class="subtitle">
+<div class="product-badge">
+POT-A01 • NOTRE SOLUTION SIGNATURE
+</div>
+
+<h2>
+Le Potager Aromates
+</h2>
+
+<div class="product-subtitle">
 Du jardin à votre cuisine.
 </div>
 
-<div class="bio">
-🌿 12 aromatiques certifiées BIO
-</div>
-
-<p>
-Un espace aromatique prêt à récolter, livré et installé
-directement chez vous. Vous choisissez l'emplacement,
-Végéa Concept s'occupe du reste.
+<p class="product-intro">
+Un espace aromatique entièrement préparé et installé chez vous.
+Végéa Concept s'occupe de la structure, du substrat, de la plantation
+et des finitions afin que votre potager soit prêt dès le premier jour.
 </p>
 
-<ul class="features">
 
-<li><strong>Format :</strong> 2,00 × 1,00 m</li>
-<li><strong>Structure :</strong> bois naturel</li>
-<li><strong>Plantation :</strong> 12 aromatiques BIO</li>
-<li><strong>Compris :</strong> substrat, plantation et finitions</li>
-<li><strong>Service :</strong> livraison et installation</li>
-<li><strong>Conseils :</strong> guide d'entretien inclus</li>
+<div class="features">
 
-</ul>
+<div class="feature">
+<strong>🌿 12 aromatiques BIO</strong>
+<small>
+Une sélection pensée pour accompagner votre cuisine au quotidien.
+</small>
+</div>
+
+<div class="feature">
+<strong>🪵 Structure bois naturel</strong>
+<small>
+Deux rondins superposés pour une hauteur finale de 20 cm.
+</small>
+</div>
+
+<div class="feature">
+<strong>🌱 Entièrement planté</strong>
+<small>
+Substrat, végétaux, plantation et finitions réalisés par nos soins.
+</small>
+</div>
+
+<div class="feature">
+<strong>🚚 Installation à domicile</strong>
+<small>
+Livré, installé et prêt à être utilisé dès notre départ.
+</small>
+</div>
+
+</div>
+
+
+<div class="specs">
+
+<div class="spec-row">
+<span>Référence</span>
+<span>POT-A01</span>
+</div>
+
+<div class="spec-row">
+<span>Dimensions</span>
+<span>2,00 × 1,00 m</span>
+</div>
+
+<div class="spec-row">
+<span>Hauteur</span>
+<span>20 cm</span>
+</div>
+
+<div class="spec-row">
+<span>Plantation</span>
+<span>12 aromatiques BIO</span>
+</div>
+
+<div class="spec-row">
+<span>Service</span>
+<span>Livraison + installation + plantation</span>
+</div>
+
+<div class="spec-row">
+<span>Conseils</span>
+<span>Guide d'entretien inclus</span>
+</div>
+
+</div>
+
+
+<div class="certifications">
+
+<div class="cert-card">
+
+<div class="cert-symbol">
+BIO
+</div>
+
+<div>
+<strong>Aromatiques BIO</strong>
+<small>
+Végétaux issus de la filière biologique
+</small>
+</div>
+
+</div>
+
+
+<div class="cert-card">
+
+<div class="cert-symbol">
+PEFC
+</div>
+
+<div>
+<strong>Bois certifié PEFC</strong>
+<small>
+Selon l'approvisionnement sélectionné
+</small>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="price-line">
 
 <div class="price">
-690 € TTC
+690 €
 </div>
 
-<div class="price-note">
-Offre standard sous conditions d'accès et de zone d'intervention.
+<div class="price-ttc">
+TTC
 </div>
 
-<a href="#contact" class="btn btn-primary">
-Demander mon Potager Aromates
+</div>
+
+<div class="included">
+Livré • Installé • Planté • Prêt à profiter
+</div>
+
+<a href="#contact" class="product-cta">
+Je veux mon Potager Aromates
 </a>
 
 </div>
 
-<div>
-
-<img
-src="hero-potager.png"
-alt="Potager Aromates Végéa Concept"
-style="border-radius:20px; box-shadow:0 20px 55px rgba(24,61,32,.14);">
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </section>
 
-<section class="range">
+
+<!-- GAMME -->
+
+<section>
 
 <div class="container">
 
-<div class="section-title">
+<div class="offers-header">
 
-<div class="eyebrow">
-Nos potagers
+<div class="section-label">
+LA COLLECTION POTAGERS
 </div>
 
-<h2>
+<h2 class="section-title">
 Une solution pour chaque façon de cultiver.
 </h2>
 
-<p>
-Des solutions standardisées pensées pour différents usages,
-du jardin familial aux espaces les plus réduits.
+<p class="section-text" style="margin:auto;">
+Le Potager Aromates ouvre la gamme Végéa Concept.
+D'autres formats viendront progressivement compléter la collection.
 </p>
 
 </div>
 
-<div class="cards">
 
-<div class="card main-card">
+<div class="offers-grid">
 
-<div class="card-label">
-POTAGER AROMATES
+<article class="offer-card">
+
+<div class="offer-placeholder">
+Potager Aromates
 </div>
 
-<h3>
-12 aromatiques BIO à portée de main.
-</h3>
+<div class="offer-body">
+
+<h3>Potager Aromates</h3>
 
 <p>
-Livré, installé et planté directement chez vous.
+Compact, élégant et pensé pour disposer de vos aromatiques
+essentielles directement dans votre jardin.
 </p>
 
-<div class="card-price">
+<div class="offer-price">
 690 € TTC
 </div>
 
 </div>
 
-<div class="card">
+</article>
 
-<div class="card-label">
+
+<article class="offer-card">
+
+<div class="offer-placeholder">
 POTAGER FAMILLE
 </div>
 
-<h3>
-Produire davantage au quotidien.
-</h3>
+<div class="offer-body">
+
+<h3>Potager Famille</h3>
 
 <p>
-Une solution pensée pour légumes, aromatiques
-et petits fruits.
+Une surface plus généreuse pour cultiver légumes,
+aromatiques et petits fruits en famille.
 </p>
 
-<div class="card-price">
+<div class="offer-price">
 Prix à venir
 </div>
 
 </div>
 
-<div class="card">
+</article>
 
-<div class="card-label">
+
+<article class="offer-card">
+
+<div class="offer-placeholder">
 POTAGER GOURMET
 </div>
 
-<h3>
-Une approche plus premium du potager.
-</h3>
+<div class="offer-body">
+
+<h3>Potager Gourmet</h3>
 
 <p>
-Pour intégrer le potager comme un véritable
-élément d'aménagement extérieur.
+Une composition plus généreuse et premium,
+pensée pour les passionnés de cuisine et de jardin.
 </p>
 
-<div class="card-price">
+<div class="offer-price">
 Sur devis
 </div>
 
 </div>
 
-<div class="card">
+</article>
 
-<div class="card-label">
-POTAGER VERTICAL
 </div>
 
-<h3>
-Cultiver même lorsque l'espace est compté.
-</h3>
+</div>
 
-<p>
-Pensé pour les balcons, terrasses et petits espaces.
+</section>
+
+
+<!-- AUTRES SOLUTIONS -->
+
+<section class="solutions" id="solutions">
+
+<div class="container">
+
+<div class="section-label">
+AU-DELÀ DU POTAGER
+</div>
+
+<h2 class="section-title">
+Un extérieur pensé comme un ensemble.
+</h2>
+
+<p class="section-text">
+Végéa Concept développe progressivement une gamme de solutions
+permettant de combiner végétal, eau, confort et aménagement.
 </p>
 
-<div class="card-price">
-Bientôt disponible
+
+<div class="solutions-grid">
+
+<div class="solution-card">
+<h3>Potagers verticaux</h3>
+<p>
+Cultiver même lorsque l'espace disponible est limité.
+</p>
+<span class="coming">Bientôt disponible</span>
 </div>
 
+<div class="solution-card">
+<h3>Récupération d'eau</h3>
+<p>
+Des solutions pensées pour valoriser l'eau de pluie au jardin.
+</p>
+<span class="coming">Offre en préparation</span>
+</div>
+
+<div class="solution-card">
+<h3>Arrosage</h3>
+<p>
+Des installations adaptées aux besoins réels de votre extérieur.
+</p>
+<span class="coming">Offre en préparation</span>
+</div>
+
+<div class="solution-card">
+<h3>Gazon & aménagements</h3>
+<p>
+Des solutions pour structurer, végétaliser et faciliter la vie au jardin.
+</p>
+<span class="coming">Offre en préparation</span>
 </div>
 
 </div>
@@ -800,6 +1229,9 @@ Bientôt disponible
 </div>
 
 </section>
+
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
@@ -807,42 +1239,22 @@ Bientôt disponible
 
 <div class="contact-box">
 
-<div class="eyebrow">
-Parlons de votre projet
+<div class="section-label">
+PARLONS DE VOTRE EXTÉRIEUR
 </div>
 
 <h2>
-Une question ou une idée pour votre extérieur ?
+Une question ou une idée pour votre jardin ?
 </h2>
 
 <p>
-Contactez-nous simplement. Nous reviendrons vers vous
-pour étudier votre besoin et vous orienter vers
-la solution la plus adaptée.
+Présentez-nous votre projet et échangeons sur la solution
+Végéa Concept la plus adaptée à votre extérieur.
 </p>
 
-<div class="contact-actions">
-
-<a
-href="mailto:contact@vegeaconcept.fr"
-class="btn btn-primary">
-Envoyer un e-mail
+<a href="#" class="product-cta">
+Nous contacter
 </a>
-
-<a
-href="https://wa.me/33759014445"
-target="_blank"
-class="btn btn-secondary">
-WhatsApp
-</a>
-
-<a
-href="tel:+33759014445"
-class="btn btn-secondary">
-Nous appeler
-</a>
-
-</div>
 
 </div>
 
@@ -852,15 +1264,12 @@ Nous appeler
 
 </main>
 
+
 <footer>
-
-<strong>VÉGÉA CONCEPT</strong><br>
-Solutions végétales clé en main<br><br>
-
-contact@vegeaconcept.fr • 07 59 01 44 45
-
+© 2026 Végéa Concept — Aménage vos extérieurs
 </footer>
 
 </body>
 </html>
+
 
